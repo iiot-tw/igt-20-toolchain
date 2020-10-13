@@ -9,9 +9,10 @@ ECLIPSE_DOWNLOAD_ADDR="http://ftp.jaist.ac.jp/pub/eclipse/technology/epp/downloa
 
 echo "installing cross-compiler"
 apt-get -y install build-essential
-echo "deb http://emdebian.org/tools/debian jessie main" > ${APT_SOURCES_LIST_ADD}
-wget http://emdebian.org/tools/debian/emdebian-toolchain-archive.key
-apt-key add emdebian-toolchain-archive.key
+#emdebian site no logger supported, but debian repo does
+#echo "deb http://emdebian.org/tools/debian jessie main" > ${APT_SOURCES_LIST_ADD}
+#wget http://emdebian.org/tools/debian/emdebian-toolchain-archive.key
+#apt-key add emdebian-toolchain-archive.key
 dpkg --add-architecture armhf
 apt-get update
 apt-get -y install crossbuild-essential-armhf gdb-multiarch
