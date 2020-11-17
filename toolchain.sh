@@ -17,6 +17,10 @@ dpkg --add-architecture armhf
 apt-get update
 apt-get -y install crossbuild-essential-armhf gdb-multiarch
 
+exit 0
+###########################
+# following script installs eclipse. you don't really need them
+###########################
 echo "installing Eclipse"
 apt-get -y install lightdm openbox default-jre
 
